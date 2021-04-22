@@ -1,0 +1,105 @@
+{% extends 'secapp/index.html' %}
+{% load static %}
+{% static "images" as baseUrl %}
+
+{% block ourteam %}
+<a name="about-us"><section class="section"></a>
+    <div class="container">
+
+        <div class="section__header">
+            <h2 class="section__title"><a href="ourteam">فريقنا في خدمتكم</a></h2>
+
+        </div>
+
+        <div class="card">
+            <div class="card__item">
+                <div class="card__inner">
+                    <div class="card__img">
+                        <img src="{% static 'images/team/me.jpg' %}" alt="">
+                    </div>
+                    <div class="card__text">
+                        <div class="social">
+                            <a class="social__item" href="https://www.facebook.com/aa.futahi?ref=bookmarks" target="_blank">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a class="social__item" href="#" target="_blank">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a class="social__item" href="#" target="_blank">
+                                <i class="fab fa-pinterest-p"></i>
+                            </a>
+                            <a class="social__item" href="#" target="_blank">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card__info">
+                    <div class="card__name">عبدالملك فتاحي</div>
+                    <div class="card__prof">رئيس الشركة</div>
+                </div>
+            </div><!-- /.card__item -->
+
+            <div class="card__item">
+                <div class="card__inner">
+                    <div class="card__img">
+                        <img src="{% static 'images/team/qadasi.jpg' %}" alt="">
+                    </div>
+                    <div class="card__text">
+                        <div class="social">
+                            <a class="social__item" href="#" target="_blank">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a class="social__item" href="#" target="_blank">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a class="social__item" href="#" target="_blank">
+                                <i class="fab fa-pinterest-p"></i>
+                            </a>
+                            <a class="social__item" href="#" target="_blank">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card__info">
+                    <div class="card__name">عبدالله القدسي</div>
+                    <div class="card__prof">مدير الشركة</div>
+                </div>
+            </div><!-- /.card__item -->
+
+            <div class="card__item">
+                <div class="card__inner">
+                    <div class="card__img">
+                        <img src="{% static 'images/team/mardi.jpg' %}" alt="">
+                    </div>
+                    <div class="card__text">
+                        <div class="social">
+                            <a class="social__item" href="#" target="_blank">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a class="social__item" href="#" target="_blank">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a class="social__item" href="#" target="_blank">
+                                <i class="fab fa-pinterest-p"></i>
+                            </a>
+                            <a class="social__item" href="#" target="_blank">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card__info">
+                    <div class="card__name">محمد المردي </div>
+                    <div class="card__prof">مدير التسويق</div>
+                </div>
+            </div><!-- /.card__item -->
+
+        </div><!-- /.card -->
+
+    </div><!-- /.container -->
+</section>
+
+<hr>
+{% endblock %}

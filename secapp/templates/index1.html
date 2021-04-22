@@ -1,0 +1,114 @@
+{% comment %} {% load static %}
+{% static "images" as baseUrl %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="{% static 'https://fonts.googleapis.com/css?family=Kaushan+Script|Montserrat:300i,400,700&amp;subset=cyrillic-ext' %}" rel="stylesheet">
+    <link  href="{% static 'https://use.fontawesome.com/releases/v5.7.2/css/all.css' %}" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+{% if title %}
+<title>Discover Russia | {{title}}</title>
+{% else %}
+<title>Discover Russia</title>
+{% endif %}
+    {% comment %} {% block title %}<title> Futa </title>{% endblock %} {% endcomment %}
+{% comment %} </head>
+<body dir="rtl" >
+<header class="header">
+
+
+    <div class="container">
+        <div class="header__inner">
+         <!-- <a href="#"><div class="header__logo">FuTa</div></a>  -->
+
+            <nav class="nav">
+                <a class="nav__link" href="{% url 'home' %}">الرئيسية</a>
+                <a class="nav__link" href="{% url 'offers' %}">عروض</a>
+                <a class="nav__link" href="{% url 'ourservices' %}">خدمات سياحية</a>
+                <a class="nav__link" href="{% url 'health' %}">السفر للعلاج</a>
+                <a class="nav__link" href="{% url 'tovisit' %}">روسيا</a>
+                <a class="nav__link" href="{% url 'ourteam' %}">من نحن</a>
+                <a class="nav__link" href="{% url 'home' %}">تواصل معنا</a>
+            </nav>
+
+        </div>
+
+
+    </div>
+</header>
+
+{% block health %}
+{% endblock %}
+
+{% block offers  %}
+{% endblock %}
+
+{% block visa %}
+{% endblock %}
+
+{% block guide %}
+{% endblock %}
+
+{% block hello %}
+{% endblock %}
+
+{% block ourservices %}
+{% endblock %}
+
+{% block ourteam %}
+{% endblock %}
+
+{% block tovisit %}
+{% endblock %}
+
+{% block dosto %}
+{% endblock %}
+
+
+
+<a name="contact-us"></a>
+
+<footer class="footer">
+    <div class="container">
+
+        <div class="footer__inner">
+            <div class="footer__col  footer__col--first">
+                
+
+                <div class="footer__social">
+                    <div class="footer__social-header">
+                         هاتف: +79313782620  
+                    </div>
+                     <div class="footer__social-header">
+                         بريد الكتروني discover1russia@gmail.com
+                    </div>
+                    <div class="footer__social-content">
+                        تابعنا على مواقع التواصل الاجتماعي <br>
+                        <a href="https://www.facebook.com/DiscoveR1Russia/" target="_blank">
+                            <i class="fab fa-facebook">Facebook</i> 
+                        </a> 
+                       <!-- <a href="#" target="_blank">
+                            <i class="fab fa-twitter">Twitter</i> 
+                        </a>-->
+                        <a href="https://www.instagram.com/discover1russia" target="_blank">
+                            <i class="fab fa-instagram">Instagram</i>
+                        </a>
+                    </div>
+                </div>
+
+                <!--<form class="subscribe" action="/" method="post">
+                    <input class="subscribe__input" type="email" name="name" placeholder="Your Email...">
+                    <button class="subscribe__btn" type="submit">Subscribe</button>
+                </form> -->
+            </div><!-- /.footer__col -->
+
+
+        </div>
+    </div><!-- /.container -->
+</footer>
+        <div class="copyright">
+            © 2019 FuTa by <span>Am</span>
+        </div>
+</body>
+</html> 

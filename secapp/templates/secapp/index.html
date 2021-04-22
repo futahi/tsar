@@ -1,0 +1,139 @@
+{% load static %}
+{% static "images" as baseUrl %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css" />
+    {% comment %} <link rel="stylesheet" href="{% static 'css/style.css' %}"> {% endcomment %}
+    <link href="{% static 'https://fonts.googleapis.com/css?family=Kaushan+Script|Montserrat:300i,400,700&amp;subset=cyrillic-ext' %}" rel="stylesheet">
+    <link  href="{% static 'https://use.fontawesome.com/releases/v5.7.2/css/all.css' %}" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+   <script type="text/javascript" src="{% static 'js/jquery-1.4.2.min.js' %}"></script>
+
+<script type="text/javascript" src="{% static 'js/all.min.js' %}"></script>
+<link rel="shortcut icon" href="{% static 'images/csar.png' %}">
+{% if title %}
+<title>القيصر | {{title}}</title>
+{% else %}
+<title>القيصر</title>
+{% endif %}
+
+</head>
+<body dir="rtl" > 
+<div class="bottom">
+<header class="header">
+
+   <a href= "{% url 'home' %}"> 
+   <div class="intro" >
+   
+         <div class="container"></a>
+
+           </div>
+          </div>  <!-- /.intro -->
+        
+         <div class="header__inner">
+            <nav class="nav">
+                {% comment %} <a  class="nav__link" href="{% url 'home' %}"> 
+                <img src="{% static 'images/csar.png' %}" alt="logo" width="60px"></a>   {% endcomment %}
+                <a class="nav__link" href="{% url 'home' %}">الرئيسية</a>
+                <a class="nav__link" href="{% url 'offers' %}">عروض</a>
+                <a class="nav__link" href="{% url 'ourservices' %}">خدمات سياحية</a>
+                <a class="nav__link" href="{% url 'health' %}">السفر للعلاج</a>
+                <a class="nav__link" href="{% url 'tovisit' %}">روسيا</a>
+                <a class="nav__link" href="{% url 'about' %}">من نحن</a>
+                <a class="nav__link" href="{% url 'guide' %}">تواصل معنا</a>
+            </nav>
+           
+        </div>      
+   
+</header>
+ </div>
+{% block home %}
+{% endblock %}
+
+{% block health %}
+{% endblock %}
+
+{% block offers  %}
+{% endblock %}
+
+{% block visa %}
+{% endblock %}
+
+{% block guide %}
+{% endblock %}
+
+{% block hello %}
+{% endblock %}
+
+{% block ourservices %}
+{% endblock %}
+
+{% block ourteam %}
+{% endblock %}
+
+{% block tovisit %}
+{% endblock %}
+
+{% block dosto %}
+{% endblock %}
+
+{% block city %}
+{% endblock %}
+
+{% block famous %}
+{% endblock %}
+
+
+
+{% block about %}
+{% endblock %}
+
+
+<div class="infooter">
+<a name="contact-us"></a>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer__inner">
+            <div class="footer__col  footer__col--first">
+                <div class="footer__social">
+                    <div class="footer__social-header">
+                         هاتف و واتساب: 0079313782620  
+                    </div>
+                     <div class="footer__social-header">
+                         بريد الكتروني discover1russia@gmail.com
+                    </div>
+                    <div class="footer__social-content">
+                        تابعنا على مواقع التواصل الاجتماعي <br>
+
+                    </div>
+                </div>
+
+                <!--<form class="subscribe" action="/" method="post">
+                    <input class="subscribe__input" type="email" name="name" placeholder="Your Email...">
+                    <button class="subscribe__btn" type="submit">Subscribe</button>
+                </form> -->
+            </div><!-- /.footer__col -->
+
+
+        </div>
+    </div><!-- /.container -->
+</footer>
+<div class="social">
+        <h1>
+        <a href="#" style="color: #CB0019;"><i class= "fab fa-youtube"></i></a> 
+        <a href="#" style="color: #1A2CEE;"><i class= "fab fa-facebook"></i></a> 
+        <a href="#" style="color: #1A2CEE;"><i class= "fab fa-vk"></i></a> 
+        <a href="#" style="color: #702D96;"><i class= "fab fa-instagram"></i></a> 
+        <a href="#"></i></a> 
+        <a href="#"><i class= "fab fa-whatsapp" style="color: #35B10A;"></i></a> 
+        </h1>
+        </div>
+</div>
+
+        <div class="copyright">
+            <span>القيصر</span> © 2021 
+        </div>
+</body>
+</html>

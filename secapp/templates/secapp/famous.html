@@ -1,0 +1,33 @@
+{% extends 'secapp/index.html' %}
+{% load static %}
+{% static "images" as baseUrl %}
+	
+{% block famous %}
+<section class="section">
+    <div class="container">
+
+        <div class="section__header">
+            <h2 class="section__title">شخصيات من روسيا</h2>
+        </div>
+         <div class="card"> 
+           {% for fame in fames %}
+            <a href="{% url 'face_details' fame.id %}">
+            <div class="card__item">
+               <div class="card__inner">
+                    <div class="card__img">
+                        <img  src="{{fame.fame_image.url}}" alt="{{fame.fame_alter}}" height="270px" length= "400px">
+                    </div>
+
+                </div>
+                <div class="card__name">{{fame.fame_name}}</div>
+            </div>
+            </a>
+            {% endfor %} 
+        </div> <!--class card -->
+    </div>
+
+    </div><!-- /.container -->
+
+</section>
+
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends 'secapp/index.html' %}
+{% load static %}
+{% static "images" as baseUrl %}
+	
+{% block city %}
+<section class="section">
+    <div class="container">
+
+                <div class="card__name">{{city.city_name}}</div>
+               
+                   
+               <div> <img  src="{{city.city_image.url}}" alt="{{city.city_alter}}" width="600px"></div>
+                                 
+                <div class="card__name">{{city.city_desc | linebreaks}}</div>
+
+    </div><!-- /.container -->
+
+</section>
+
+{% endblock %}

@@ -1,0 +1,238 @@
+{% extends 'secapp/index.html' %}
+{% load static %}
+{% static "images" as baseUrl %}
+
+
+    {% block home %}
+    
+ {% comment %} <a name="Offers"><section class="section"></a>
+    <div class="container">
+          <div class="section__header">
+          <a href="{% url 'offers' %}">  <h2 class="section__title">عروض</h2> </a>
+          </div
+             <div class="card">
+             {% for offer in offers %}
+                <div class="card__item">
+                 <div class="card__inner">
+                    <div class="card__img">
+                      <a href="{% url 'offer_details' offer.id %}"><img  src="{{offer.offer_image.url}}" alt="{{offer.offer_alter}}" height="280px" length= "430px""></a>
+                    </div>
+                        <div class="card__text"><a href="{% url 'offer_details' offer.id %}"> {{offer.offer_name}}</a>
+                        </div>
+                            <div class="card__info">
+                                <div class="card__name"><a href="{% url 'offer_details' offer.id %}"> {{offer.offer_name}}</a>
+                                </div>
+                            </div>
+                 
+             </a>
+           
+              {% endfor %} 
+       </div>
+
+    </div> <!-- /.container -->
+</section>
+
+<hr>  {% endcomment %}
+
+
+<section class="section">
+    <div class="container">
+        <div class="section__header">
+           <a href="{% url 'ourservices' %}"> <h2 class="section__title" >خدمات</h2></a>
+        </div>
+
+        <div class="card">
+            {% for service in services %}
+            <div class="card__item">
+                <div class="card__inner">
+                    <div class="card__img">
+                      <a href="{% url 'services_details' service.id %}">  <img  src="{{service.service_image.url}}" alt="{{service.service_alter}}" height="280px" length= "430px">
+                   </a> </div> 
+
+                    <div class="card__text"><a href="{% url 'services_details' service.id %}"> {{service.service_name}}</a></div>
+                </div>
+                <div class="card__info">
+                    <div class="card__name"><a href="{% url 'services_details' service.id %}">{{service.service_name}}</a></div>
+                </div>
+            </div>
+           
+            {% endfor %} 
+        </div>
+
+    </div><!-- /.container -->
+</section> 
+
+
+<hr>
+
+
+<section class="section">
+    <div class="container">
+
+        <div class="section__header">
+         <a href="{% url 'tovisit' %}"   <h2 class="section__title">اكتشف روسيا</h2> </a>
+        </div>
+
+        <div class="card">
+           
+           <a href="{% url 'dosto' %} "> <div class="card__item">
+                <div class="card__inner">
+                    <div class="card__img">
+                      <img  src="{% static 'images/redsquer.jpg' %}" alt="dosto" height="280px" length= "430px">
+                    </div>
+
+                    <div class="card__text">معالم تاريخية</div>
+                </div>
+                <div class="card__info">
+                    <div class="card__name">معالم تاريخية</div>
+                </div>
+            </div></a>
+            
+                    <a href="{% url 'cities' %} "> <div class="card__item">
+                <div class="card__inner">
+                    <div class="card__img">
+                      <img  src="{% static 'images/cities/moscow.jpg' %}" alt="cities" height="280px" length= "430px">
+                    </div>
+
+                    <div class="card__text">مدن</div>
+                </div>
+                <div class="card__info">
+                    <div class="card__name">مدن</div>
+                </div>
+            </div></a>
+
+                       <a href="{% url 'famous' %}"> <div class="card__item">
+                <div class="card__inner">
+                    <div class="card__img">
+                      <img  src="{% static 'images/famous/peter1.jpeg' %}" alt="famous" height="280px" length= "430px">
+                    </div>
+
+                    <div class="card__text">شخصيات</div>
+                </div>
+                <div class="card__info">
+                    <div class="card__name">شخصيات</div>
+                </div>
+            </div></a>
+
+                                   <a href="{% url 'famous' %}"> <div class="card__item">
+                <div class="card__inner">
+                    <div class="card__img">
+                      <img  src="{% static 'images/shopping.jpeg' %}" alt="famous" height="280px" length= "430px">
+                    </div>
+
+                    <div class="card__text">تسوق</div>
+                </div>
+                <div class="card__info">
+                    <div class="card__name">تسوق</div>
+                </div>
+            </div></a>
+
+
+        </div>
+
+    </div><!-- /.container -->
+</section>
+
+
+
+
+
+{% comment %} <section class="section">
+    <div class="container">
+
+        <div class="section__header">
+            <h2 class="section__title">فريقنا في خدمتكم</h2>
+
+        </div>
+
+        <div class="card">
+            <div class="card__item">
+                <div class="card__inner">
+                    <div class="card__img">
+                        <img src="{% static 'images/team/me.jpg' %}" alt="staff1" width="270px">
+                    </div>
+                    <div class="card__text">
+                        <div class="social">
+                            <a class="social__item" href="https://www.facebook.com/aa.futahi?ref=bookmarks" target="_blank">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a class="social__item" href="#" target="_blank">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a class="social__item" href="#" target="_blank">
+                                <i class="fab fa-pinterest-p"></i>
+                            </a>
+                            <a class="social__item" href="#" target="_blank">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card__info">
+                    <div class="card__name">عبدالملك فتاحي</div>
+                    <div class="card__prof">رئيس الشركة</div>
+                </div>
+            </div><!-- /.card__item -->
+
+            <div class="card__item">
+                <div class="card__inner">
+                    <div class="card__img">
+                        <img src="{% static 'images/team/qadasi.jpg' %}" alt="staff2" width="270px">
+                    </div>
+                    <div class="card__text">
+                        <div class="social">
+                            <a class="social__item" href="#" target="_blank">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a class="social__item" href="#" target="_blank">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a class="social__item" href="#" target="_blank">
+                                <i class="fab fa-pinterest-p"></i>
+                            </a>
+                            <a class="social__item" href="#" target="_blank">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card__info">
+                    <div class="card__name">عبدالله القدسي</div>
+                    <div class="card__prof">مدير الشركة</div>
+                </div>
+            </div><!-- /.card__item -->
+
+            <div class="card__item">
+                <div class="card__inner">
+                    <div class="card__img">
+                        <img src="{% static 'images/team/mardi.jpg' %}" alt="staff3" width="270px">
+                    </div>
+                    <div class="card__text">
+                        <div class="social">
+                            <a class="social__item" href="#" target="_blank">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a class="social__item" href="#" target="_blank">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a class="social__item" href="#" target="_blank">
+                                <i class="fab fa-pinterest-p"></i>
+                            </a>
+                            <a class="social__item" href="#" target="_blank">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card__info">
+                    <div class="card__name">محمد المردي </div>
+                    <div class="card__prof">مدير التسويق</div>
+                </div> 
+            </div><!-- /.card__item -->
+
+        </div><!-- /.card -->
+
+    </div><!-- /.container -->{% endcomment %}
+
+{% endblock %}
+

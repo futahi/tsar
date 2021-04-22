@@ -1,0 +1,33 @@
+{% extends 'secapp/index.html' %}
+{% load static %}
+{% static "images" as baseUrl %}
+	
+{% block city %}
+<section class="section">
+    <div class="container">
+
+        <div class="section__header">
+            <h2 class="section__title">مدن روسيا</h2>
+        </div>
+         <div class="card"> 
+           {% for city in cities %}
+                       <a href="{% url 'city_details' city.id %}">
+            <div class="card__item">
+               <div class="card__inner">
+                    <div class="card__img">
+                        <img  src="{{city.city_image.url}}" alt="{{city.city_alter}}" height="270px" length= "400px">
+                    </div>
+
+                </div>
+                <div class="card__name">{{city.city_name}}</div>
+            </div>
+            </a>
+            {% endfor %} 
+        </div> <!--class card -->
+    </div>
+
+    </div><!-- /.container -->
+
+</section>
+
+{% endblock %}

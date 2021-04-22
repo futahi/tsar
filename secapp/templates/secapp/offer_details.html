@@ -1,0 +1,19 @@
+{% extends 'secapp/index.html' %}
+{% load static %}
+{% static "images" as baseUrl %}
+	
+{% block offers %}
+<section class="section">
+    <div class="container">
+
+                <div class="card__name">{{offer.offer_name}}</div>
+  
+               <div> <img  src="{{offer.offer_image.url}}" alt="{{offer.offer_alter}}" width="600px"></div>
+                                 
+                <div class="card__name">{{offer.offer_desc | linebreaks}}</div>
+
+    </div><!-- /.container -->
+
+</section>
+
+{% endblock %}

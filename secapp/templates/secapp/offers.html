@@ -1,0 +1,35 @@
+{% extends 'secapp/index.html' %}
+{% load static %}
+{% static "images" as baseUrl %}
+	
+{% block offers %}
+<a name="Offers"><section class="section"></a>
+    <div class="container">
+
+        <div class="section__header">
+            <h2 class="section__title">عروض</h2>
+        </div>
+
+        <div class="card">
+            {% for offer in offers %}
+            <a href="{% url 'offer_details' offer.id %}"> 
+            <div class="card__item">
+                <div class="card__inner">
+                    <div class="card__img">
+                      <img  src="{{offer.offer_image.url}}" alt="{{offer.offer_alter}}" height="200px">
+                    </div>
+
+                    <div class="card__text">{{offer.offer_name}}</div>
+                </div>
+                <div class="card__info">
+                    <div class="card__name">{{offer.offer_desc}}</div>
+                </div>
+            </div>
+           </a>
+            {% endfor %} 
+        </div>
+
+    </div><!-- /.container -->
+</section>
+<hr>
+{% endblock %}

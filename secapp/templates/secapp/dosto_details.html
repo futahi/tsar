@@ -1,0 +1,20 @@
+{% extends 'secapp/index.html' %}
+{% load static %}
+{% static "images" as baseUrl %}
+	
+{% block dosto %}
+<section class="section">
+    <div class="container">
+
+                <div class="card__name">{{dost.dost_name}}</div>
+               
+                   
+               <div> <img  src="{{dost.dost_image.url}}" alt="{{dost.dost_alter}}" width="900px"></div>
+                                 
+                <div class="card__name">{{dost.dost_desc | linebreaks}}</div>
+
+    </div><!-- /.container -->
+
+</section>
+
+{% endblock %}

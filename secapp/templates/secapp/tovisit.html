@@ -1,0 +1,59 @@
+{% extends 'secapp/index.html' %}
+{% load static %}
+{% static "images" as baseUrl %}
+
+{% block tovisit %}
+<section class="section">
+    <div class="container">
+
+        <div class="section__header">
+            <h2 class="section__title">اكتشف روسيا</h2>
+        </div>
+
+        <div class="card">
+           
+           <a href="{% url 'dosto' %} "> <div class="card__item">
+                <div class="card__inner">
+                    <div class="card__img">
+                      <img  src="{% static 'images/redsquer.jpg' %}" alt="cities" height="195px">
+                    </div>
+
+                    <div class="card__text">معالم تاريخية</div>
+                </div>
+                <div class="card__info">
+                    <div class="card__name">معالم تاريخية</div>
+                </div>
+            </div></a>
+           
+                    <a href="{% url 'cities' %} "> <div class="card__item">
+                <div class="card__inner">
+                    <div class="card__img">
+                      <img  src="{% static 'images/cities/moscow.jpg' %}" alt="cities" height="195px">
+                    </div>
+
+                    <div class="card__text">مدن</div>
+                </div>
+                <div class="card__info">
+                    <div class="card__name">مدن</div>
+                </div>
+            </div></a>
+
+                       <a href="{% url 'famous' %}"> <div class="card__item">
+                <div class="card__inner">
+                    <div class="card__img">
+                      <img  src="{% static 'images/famous/peter1.jpeg' %}" alt="cities" height="195px">
+                    </div>
+
+                    <div class="card__text">شخصيات</div>
+                </div>
+                <div class="card__info">
+                    <div class="card__name">شخصيات</div>
+                </div>
+            </div></a>
+
+
+        </div>
+    </div><!-- /.container -->
+</section>
+
+{% endblock %}

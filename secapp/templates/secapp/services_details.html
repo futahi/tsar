@@ -1,0 +1,25 @@
+{% extends 'secapp/index.html' %}
+{% load static %}
+{% static "images" as baseUrl %}
+
+{% block ourservices %}
+<section class="section">
+    <div class="container">
+
+
+        <div class="card">
+        <div class = "section__header"> <div class = "section__title"><h5>{{service.service_name}} </h5></div></div>
+            <div class="card__item">
+                       <img  src="{{service.service_image.url}}" alt="{{service.service_alter}}" height="400 px">
+            <div class="card__info">
+                    <div class="card__name">{{service.service_desc | linebreaks}}</div>
+            </div>
+        </div>
+           
+        </div>
+
+    </div><!-- /.container -->
+</section>
+
+<hr>
+{% endblock %}
