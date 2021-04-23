@@ -4,7 +4,7 @@ import sys
 
 
 # add your project directory to the sys.path
-path = '/home/futahi/tsar/'
+path = '/home/futahi1/tsar/'
 if path not in sys.path:
     # sys.path.insert(0, path)
     sys.path.append(path)
