@@ -1,9 +1,28 @@
 
-
 import os
+import sys
 
-from django.core.wsgi import get_wsgi_application
+# add your project directory to the sys.path
+path = '/home/futahi/tsar/'
+if path not in sys.path:
+    # sys.path.insert(0, path)
+    sys.path.append(path)
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'secondsite.settings')
+os.chdir(path)
 
-application = get_wsgi_application()
+# set environment variable to tell django where your settings.py is
+# os.environ['DJANGO_SETTINGS_MODULE'] = 'mysite.settings'
+os.environ.setdefault('DJANGO_SETTINGS_MODULE',
+                      'secondsite.settings')
+
+# Import your Django project's configuration
+import django
+django.setup()
+
+# Import the Django WSGI to handle any requests
+import django.core.handlers.wsgi
+application = django.core.handlers.wsgi.WSGIHandler()
+
+# # serve django via WSGI
+# from django.core.wsgi import get_wsgi_application
+# application = get_wsgi_application()
