@@ -1,6 +1,8 @@
-
 import os
 import sys
+
+from django.core.wsgi import get_wsgi_application
+
 
 # add your project directory to the sys.path
 path = '/home/futahi/tsar/'
@@ -12,8 +14,7 @@ os.chdir(path)
 
 # set environment variable to tell django where your settings.py is
 # os.environ['DJANGO_SETTINGS_MODULE'] = 'mysite.settings'
-os.environ.setdefault('DJANGO_SETTINGS_MODULE',
-                      'secondsite.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE','secondsite.settings')
 
 # Import your Django project's configuration
 import django
